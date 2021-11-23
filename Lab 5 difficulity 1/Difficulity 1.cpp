@@ -26,14 +26,13 @@ int main() {
 	}
 
 	//Поиск строки без положительного элемента
-	for (int i = 0; i < rows && founded == false; i++) {
+	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < columns && positive == false; j++) {
 			if (arr[i][j] > 0) {
 				positive = true;
 			}
 			else if (j == columns - 1) {
 				cout << "The \"Special\" row is " << i + 1 << endl;
-				founded = true;
 			}
 		}
 	}

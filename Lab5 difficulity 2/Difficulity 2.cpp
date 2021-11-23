@@ -25,6 +25,16 @@ int main() {
 		}
 	}
 
+	//Вывод матрицы
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < columns; j++) {
+			cout << arr[i][j] << '\t';
+		}
+		cout << endl;
+	}
+
+	cout << endl;
+
 	//Поиск масимального элемента массива
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < columns; j++) {
@@ -45,7 +55,10 @@ int main() {
 
 	//Удаление строки особого элемента
 	if (max_row != rows-1) {
-		arr[max_row] = arr[max_row + 1];
+		for (int i = max_row; i < rows-1; i++)
+		{
+			arr[i] = arr[i + 1];
+		}
 	}
 	rows--;
 
